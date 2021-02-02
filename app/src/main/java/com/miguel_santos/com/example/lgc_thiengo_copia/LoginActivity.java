@@ -18,7 +18,8 @@ public class LoginActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        if (getSupportActionBar() != null) {
+        if (getSupportActionBar() != null && getIntent() == null
+        || getIntent().getFlags() == 0) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
@@ -36,8 +37,16 @@ public class LoginActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void acessarCadastroActivity(View view) {
+        invocaActivity(CadastroActivity.class);
+    }
+
     public void acessarRecuperacaoAcesso (View view) {
-        Intent intent = new Intent(this, RecuperarAcessoPassoUmActivity.class);
+       invocaActivity(RecuperarAcessoPassoUmActivity.class);
+    }
+
+    private void invocaActivity(Class cls) {
+        Intent intent = new Intent(this, cls);
         startActivity(intent);
     }
 

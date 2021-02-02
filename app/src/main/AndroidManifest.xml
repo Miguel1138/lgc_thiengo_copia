@@ -13,13 +13,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".CadastroActivity"/>
-        <activity android:name=".RecuperarAcessoPassoUmActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SobreActivity" />
-        <activity android:name=".ContatoActivity" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".TermosCondicoesActivity"
+            android:label="@string/title_activity_termos_condicoes"></activity>
+        <activity
+            android:name=".CadastroActivity"
+            android:label="@string/title_activity_cadastro" />
+        <activity
+            android:name=".RecuperarAcessoPassoUmActivity"
+            android:label="@string/title_activity_recuperar_acesso_passo_um" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".SobreActivity"
+            android:label="@string/title_activity_sobre" />
+        <activity
+            android:name=".ContatoActivity"
+            android:label="@string/title_activity_contato" />
+        <activity
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

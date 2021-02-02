@@ -3,10 +3,11 @@
 
     <string name="title_activity_contato">Contato</string>
     <string name="title_activity_sobre">Sobre</string>
-    <string name="title_acitivty_login">Login</string>
-    <string name="title_acitivty_recuperar_acesso_passo_um"> Recuperação de acesso - Passo 1 </string>
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_recuperar_acesso_passo_um"> Recuperação de acesso - Passo 1 </string>
     <string name="title_activity_recuperar_acesso_passo_dois">Recuperação de acesso - Passo 2</string>
-    <string name="title_acitivity_cadastro">Cadastro</string>
+    <string name="title_activity_cadastro">Cadastro</string>
+    <string name="title_activity_termos_condicoes">"Termos e condições de uso "</string>
 
     <string name="item_academias">Academias</string>
     <string name="item_administracao_de_imoveis">Administração de Imóveis</string>

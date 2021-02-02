@@ -1,11 +1,19 @@
 package com.miguel_santos.com.example.lgc_thiengo_copia;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
-public class CadastroActivity extends AppCompatActivity {
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
+
+public class CadastroActivity extends AppCompatActivity implements MaterialDialog.SingleButtonCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +26,9 @@ public class CadastroActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
+        String rotuloTermosECondicoes = "Concordo com os <font color=\"#1193f5\">Termos e Condições de Uso</font> de Laranjeiras Guia Comercial APP";
+        TextView tvTermosECondicoes = findViewById(R.id.tv_termos_e_condicoes);
+        tvTermosECondicoes.setText(Html.fromHtml(rotuloTermosECondicoes));
     }
 
     @Override
@@ -27,4 +38,36 @@ public class CadastroActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void cadastrar(View view) {
+        new MaterialDialog.Builder(this)
+                .title("Cadastro realizado")
+                .content("Seu cadastro em Laranjeiras Guia Comercial APP foi realizado com sucesso, já pode realizar o acesso em Login.")
+                .positiveText("ok")
+                .positiveColorRes(R.color.colorLink)
+                .onPositive(this)
+                .show();
+    }
+
+    @Override
+    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+        Intent intent = new Intent(this, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+
+    public void carregarImagemPerfil(View view) {
+        new MaterialDialog.Builder(this)
+                .title("Carregamento de imagem")
+                .content("A library ImagePicker provavelmente será utilizada aqui")
+                .positiveText("Ok")
+                .positiveColorRes(R.color.colorLink)
+                .show();
+    }
+
+    public void termosECondicoesActivity(View view) {
+        Intent intent = new Intent(this, TermosCondicoesActivity.class);
+        startActivity(intent);
+    }
+
 }
