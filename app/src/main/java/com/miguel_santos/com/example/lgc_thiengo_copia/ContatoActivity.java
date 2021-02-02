@@ -1,11 +1,16 @@
 package com.miguel_santos.com.example.lgc_thiengo_copia;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
-public class ContatoActivity extends AppCompatActivity {
+import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.MaterialDialog;
+
+public class ContatoActivity extends AppCompatActivity implements MaterialDialog.SingleButtonCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +31,20 @@ public class ContatoActivity extends AppCompatActivity {
             finish();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void enviarContato(View view) {
+        new MaterialDialog.Builder(this)
+                .title("Contato")
+                .content("Mensagem de contato enviada com sucesso. Em menos de 24hrs estaremos lhe respondendo")
+                .positiveText("Ok")
+                .positiveColorRes(R.color.colorLink)
+                .onPositive(this)
+                .show();
+    }
+
+    @Override
+    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+        finish();
     }
 }

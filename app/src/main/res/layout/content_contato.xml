@@ -108,7 +108,7 @@
         android:id="@+id/bt_enviar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#82b73f"
+        android:background="@drawable/botao_clique_estilo"
         android:text="Enviar"
         android:textColor="@android:color/white"
         android:textSize="18sp"

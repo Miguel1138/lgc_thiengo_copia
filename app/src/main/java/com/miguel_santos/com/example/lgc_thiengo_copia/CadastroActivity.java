@@ -1,20 +1,16 @@
 package com.miguel_santos.com.example.lgc_thiengo_copia;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
-public class LoginActivity extends AppCompatActivity {
+public class CadastroActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_cadastro);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -22,10 +18,6 @@ public class LoginActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
-
-        String rotuloCadastro = "Ainda não tem conta? <font color=\"#1193f5\">CADASTRE-SE</font>";
-        TextView tvCadastro = findViewById(R.id.tv_cadastro);
-        tvCadastro.setText(Html.fromHtml(rotuloCadastro));
     }
 
     @Override
@@ -35,10 +27,4 @@ public class LoginActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-    public void acessarRecuperacaoAcesso (View view) {
-        Intent intent = new Intent(this, RecuperarAcessoPassoUmActivity.class);
-        startActivity(intent);
-    }
-
 }

@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">lgc_thiengo_copia</string>
 
+    <string name="title_activity_contato">Contato</string>
+    <string name="title_activity_sobre">Sobre</string>
+    <string name="title_acitivty_login">Login</string>
+    <string name="title_acitivty_recuperar_acesso_passo_um"> Recuperação de acesso - Passo 1 </string>
+    <string name="title_activity_recuperar_acesso_passo_dois">Recuperação de acesso - Passo 2</string>
+    <string name="title_acitivity_cadastro">Cadastro</string>
+
     <string name="item_academias">Academias</string>
     <string name="item_administracao_de_imoveis">Administração de Imóveis</string>
     <string name="item_bares_e_boutequins">Bares e Boutequins</string>
@@ -13,6 +20,7 @@
     <string name="item_escolas_de_idiomas">"Escolas de Idiomas "</string>
     <string name="item_pet_shop">Pet shop</string>
     <string name="item_taxi">Táxi</string>
+
     <string name="navigation_drawer_open">Abrir barra de navegação</string>
     <string name="navigation_drawer_close">Fechar barra de navegação</string>
     <string name="action_settings">Settings</string>
