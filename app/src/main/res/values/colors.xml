@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorLink">#1193f5</color>
     <color name="colorFacebookButton">#4665ac</color>
+    <color name="colorActivityBackground"> #ffffff</color>
 </resources>

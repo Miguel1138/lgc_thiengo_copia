@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="user_1" />
+    <drawable name="user_2" />
+    <drawable name="user_3" />
+    <drawable name="user_4" />
+    <drawable name="loja_1" />
+    <drawable name="loja_4" />
+    <drawable name="loja_3" />
+    <drawable name="loja_2" />
+</resources>
