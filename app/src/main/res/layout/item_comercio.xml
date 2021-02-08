@@ -44,10 +44,14 @@
 
     <TextView
         android:id="@+id/tv_localizacao"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:ellipsize="end"
+        android:maxLines="2"
+        android:textAlignment="textStart"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toRightOf="@id/iv_localizacao"
         app:layout_constraintStart_toEndOf="@id/iv_localizacao"
         app:layout_constraintTop_toBottomOf="@id/tv_nome_fantasia" />
@@ -57,9 +61,9 @@
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toLeftOf="@id/iv_localizacao"
-        app:layout_constraintStart_toStartOf="@id/iv_localizacao"
-        app:layout_constraintTop_toBottomOf="@id/iv_localizacao" />
+        app:layout_constraintLeft_toLeftOf="@id/tv_localizacao"
+        app:layout_constraintStart_toStartOf="@id/tv_localizacao"
+        app:layout_constraintTop_toBottomOf="@id/tv_localizacao" />
 
     <ImageView
         android:id="@+id/iv_estrela_2"
@@ -103,106 +107,105 @@
         android:textSize="15sp"
         app:layout_constraintLeft_toRightOf="@id/iv_estrela_5"
         app:layout_constraintStart_toEndOf="@id/iv_estrela_5"
-        app:layout_constraintTop_toBottomOf="@id/iv_localizacao" />
+        app:layout_constraintTop_toBottomOf="@id/tv_localizacao" />
 
     <TextView
         android:id="@+id/tv_avaliacao_qtd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/iv_localizacao"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="2dp"
-        app:layout_constraintStart_toEndOf="@id/tv_avaliacao_pontos"
-        app:layout_constraintLeft_toRightOf="@id/tv_avaliacao_pontos"
         android:paddingTop="3dp"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_avaliacao_pontos"
+        app:layout_constraintStart_toEndOf="@id/tv_avaliacao_pontos"
+        app:layout_constraintTop_toBottomOf="@id/tv_localizacao" />
 
 
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/iv_comentario_1"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintLeft_toLeftOf="@id/iv_estrela_1"
-        app:layout_constraintStart_toStartOf="@id/iv_estrela_1"
-        app:layout_constraintTop_toBottomOf="@id/iv_estrela_1"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="16dp"
         android:contentDescription="Imagem de perfil do usuário do último comentário"
         android:scaleType="centerCrop"
         android:src="@drawable/img_perfil_padrao"
         app:civ_border_width="0dp"
-        app:civ_shadow="false"/>
+        app:civ_shadow="false"
+        app:layout_constraintLeft_toLeftOf="@id/iv_estrela_1"
+        app:layout_constraintStart_toStartOf="@id/iv_estrela_1"
+        app:layout_constraintTop_toBottomOf="@id/iv_estrela_1" />
 
     <TextView
         android:id="@+id/tv_comentario_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/iv_comentario_1"
         android:layout_marginTop="5dp"
-        app:layout_constraintStart_toEndOf="@id/tv_comentario_1"
-        app:layout_constraintLeft_toRightOf="@id/tv_comentario_1"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_comentario_1"
+        app:layout_constraintStart_toEndOf="@id/tv_comentario_1"
+        app:layout_constraintTop_toTopOf="@id/iv_comentario_1" />
 
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/iv_comentario_2"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintLeft_toLeftOf="@id/iv_comentario_1"
-        app:layout_constraintStart_toStartOf="@id/iv_comentario_1"
-        app:layout_constraintTop_toBottomOf="@id/iv_comentario_1"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:contentDescription="Imagem de perfil do usuário do penúltimo comentário"
         android:scaleType="centerCrop"
         android:src="@drawable/img_perfil_padrao"
         app:civ_border_width="0dp"
-        app:civ_shadow="false"/>
+        app:civ_shadow="false"
+        app:layout_constraintLeft_toLeftOf="@id/iv_comentario_1"
+        app:layout_constraintStart_toStartOf="@id/iv_comentario_1"
+        app:layout_constraintTop_toBottomOf="@id/iv_comentario_1" />
 
     <TextView
         android:id="@+id/tv_comentario_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/iv_comentario_2"
         android:layout_marginTop="5dp"
-        app:layout_constraintStart_toEndOf="@id/iv_comentario_2"
-        app:layout_constraintLeft_toRightOf="@id/iv_comentario_2"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_comentario_2"
+        app:layout_constraintStart_toEndOf="@id/iv_comentario_2"
+        app:layout_constraintTop_toTopOf="@id/iv_comentario_2" />
 
     <com.mikhaellopez.circularimageview.CircularImageView
         android:id="@+id/iv_comentario_3"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintLeft_toLeftOf="@id/iv_comentario_2"
-        app:layout_constraintStart_toStartOf="@id/iv_comentario_2"
-        app:layout_constraintTop_toBottomOf="@id/iv_comentario_2"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:contentDescription="Imagem de perfil do usuário do penúltimo comentário"
         android:scaleType="centerCrop"
         android:src="@drawable/img_perfil_padrao"
         app:civ_border_width="0dp"
-        app:civ_shadow="false"/>
+        app:civ_shadow="false"
+        app:layout_constraintLeft_toLeftOf="@id/iv_comentario_2"
+        app:layout_constraintStart_toStartOf="@id/iv_comentario_2"
+        app:layout_constraintTop_toBottomOf="@id/iv_comentario_2" />
 
     <TextView
         android:id="@+id/tv_comentario_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/iv_comentario_3"
         android:layout_marginTop="5dp"
-        app:layout_constraintStart_toEndOf="@id/iv_comentario_3"
-        app:layout_constraintLeft_toRightOf="@id/iv_comentario_3"
         android:ellipsize="end"
         android:maxLines="1"
-        android:textSize="14sp"/>
-
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_comentario_3"
+        app:layout_constraintStart_toEndOf="@id/iv_comentario_3"
+        app:layout_constraintTop_toTopOf="@id/iv_comentario_3" />
 
 
 </android.support.constraint.ConstraintLayout>

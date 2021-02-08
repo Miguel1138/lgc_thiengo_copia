@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <drawable name="user_1" />
-    <drawable name="user_2" />
-    <drawable name="user_3" />
-    <drawable name="user_4" />
-    <drawable name="loja_1" />
-    <drawable name="loja_4" />
-    <drawable name="loja_3" />
-    <drawable name="loja_2" />
+    <item name="user_1" type="drawable">@drawable/img_perfil_padrao </item>
+    <item name="user_2" type="drawable" >@drawable/img_perfil_padrao</item>
+    <item name="user_3" type="drawable">@drawable/img_perfil_padrao</item>
+    <item name="user_4" type="drawable">@drawable/img_perfil_padrao</item>
+    <item type="drawable" name="loja_1">@drawable/ic_administracao_de_imoveis</item>
+    <item name="loja_2" type="drawable">@drawable/ic_administracao_de_imoveis</item>
+    <item name="loja_3" type="drawable">@drawable/ic_administracao_de_imoveis</item>
+    <item name="loja_4" type="drawable">@drawable/ic_administracao_de_imoveis</item>
 </resources>

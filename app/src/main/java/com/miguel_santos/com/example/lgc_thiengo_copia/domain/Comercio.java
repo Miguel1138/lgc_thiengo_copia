@@ -3,6 +3,7 @@ package com.miguel_santos.com.example.lgc_thiengo_copia.domain;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Comercio implements Parcelable{
@@ -25,8 +26,16 @@ public class Comercio implements Parcelable{
         this.comentarios = comentarios;
     }
 
+
     //Apagar construtor posteriormente
-    public Comercio(int imagen, String s, String localizacoe, double avaliacaoPontos, int avaliacaoQtd) {
+
+    public Comercio(int imagem, String nomeFantasia, String localizacao, double avaliacaoPontos, int avaliacaoQtd) {
+        this.imagem = imagem;
+        this.nomeFantasia = nomeFantasia;
+        this.localizacao =localizacao;
+        this.avaliacaoPontos = avaliacaoPontos;
+        this.avaliacaoQtd = avaliacaoQtd;
+        comentarios = new ArrayList<>();
     }
 
     public int getImagem() {

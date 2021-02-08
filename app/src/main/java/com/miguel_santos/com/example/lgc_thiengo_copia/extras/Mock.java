@@ -20,7 +20,7 @@ public class Mock {
 
     public static Comentario criarComentarioAleatorio() {
         User user = criarUserAleatorio();
-        int posMensagem = (int) Math.random() * 5;
+        int posMensagem = (int) (Math.random() * 5);
         String[] mensagens = {
                 "Note that this approach is more biased and less efficient than a nextInt approach",
                 "The Java Math library function Math.random() generates a double value in the range [0,1). Notice this range does not include the 1.",
@@ -42,12 +42,12 @@ public class Mock {
                 "Museu da Imigração do Estado de São Paulo, R. Visc. de Parnaíba, 1316 - Mooca, São Paulo - SP, 03164-300, Brasil",
                 "Anhembi, Av. Olavo Fontoura, 1209 - Santana, São Paulo - SP, 02012-021, Brasil"
         };
-        double avaliacaoPontos = Math.random() * 5;
-        int avaliacaoQtd = (int) Math.random() * 109;
-        int posImagem = (int) Math.random() * 4;
-        int posNome = (int) Math.random() * 3;
-        int posLocal = (int) Math.random() * 3;
-        int qtdComentarios = (int) Math.random() * 4;
+        double avaliacaoPontos = (Math.random() * 5);
+        int avaliacaoQtd = (int) (Math.random() * 109);
+        int posImagem = (int) (Math.random() * 3);
+        int posNome = (int) (Math.random() * 2);
+        int posLocal = (int) (Math.random() * 2);
+        int qtdComentarios = (int) (Math.random() * 4);
         Comercio comercio = new Comercio(
                 imagens[posImagem],
                 nomesFantasia[posNome],

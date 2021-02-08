@@ -17,11 +17,15 @@ import com.mikhaellopez.circularimageview.CircularImageView;
 
 import java.util.List;
 
-public class ComerciosAdapter extends RecyclerView.Adapter<ComerciosAdapter.ViewHolder>{
+public class ComerciosAdapter extends RecyclerView.Adapter<ComerciosAdapter.ViewHolder> {
 
     private List<Comercio> comercios;
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public ComerciosAdapter(List<Comercio> comercios) {
+        this.comercios = comercios;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         ImageView ivPrincipal;
         TextView tvNomeFantasia;
@@ -38,6 +42,7 @@ public class ComerciosAdapter extends RecyclerView.Adapter<ComerciosAdapter.View
         ImageView ivEstrela2;
         ImageView ivEstrela3;
         ImageView ivEstrela4;
+
         ImageView ivEstrela5;
 
         public ViewHolder(@NonNull View itemView) {
@@ -68,7 +73,7 @@ public class ComerciosAdapter extends RecyclerView.Adapter<ComerciosAdapter.View
             tvNomeFantasia.setText(comercio.getNomeFantasia());
             tvLocalizacao.setText(comercio.getLocalizacao());
             tvAvaliacaoPontos.setText(String.format("%.1f", comercio.getAvaliacaoPontos()));
-            tvAvaliacaoQtd.setText("("+ String.valueOf(comercio.getAvaliacaoQtd()+")"));
+            tvAvaliacaoQtd.setText("(" + String.valueOf(comercio.getAvaliacaoQtd() + ")"));
             setEstrelasAvaliacao(comercio);
             setComentarios(comercio);
         }
@@ -99,10 +104,10 @@ public class ComerciosAdapter extends RecyclerView.Adapter<ComerciosAdapter.View
         }
 
         private void setEstrela(ImageView ivEstrela, int posicaoEstrela, Comercio comercio) {
-            if(posicaoEstrela <= (int) comercio.getAvaliacaoPontos()) {
+            if (posicaoEstrela <= (int) comercio.getAvaliacaoPontos()) {
                 ivEstrela.setImageResource(R.drawable.ic_estrela);
             } else if (posicaoEstrela > comercio.getAvaliacaoPontos()
-            && posicaoEstrela - 1 < comercio.getAvaliacaoPontos()) {
+                    && posicaoEstrela - 1 < comercio.getAvaliacaoPontos()) {
                 ivEstrela.setImageResource(R.drawable.ic_estrela_metade);
             } else {
                 ivEstrela.setImageResource(R.drawable.ic_estrela_vazia);
@@ -116,10 +121,6 @@ public class ComerciosAdapter extends RecyclerView.Adapter<ComerciosAdapter.View
             v.getContext().startActivity(intent);
         }
 
-    }
-
-    public ComerciosAdapter(List<Comercio> comercios) {
-        this.comercios =comercios;
     }
 
     @NonNull
